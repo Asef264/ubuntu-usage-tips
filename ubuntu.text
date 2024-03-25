@@ -1,0 +1,22 @@
+## Problem : 
+
+as you install the ubuntu some or all of the folders in home are locked or you do not have permission to read or write in them : 
+
+
+## solution : 
+
+sudo chown -R $USER: $HOME
+
+running this command you get the permission of administrator on your home directory 
+
+-----------------------------------***-----------------------------------------------
+***-------------------------------------------------------------------------------***
+-----------------------------------***-----------------------------------------------
+
+
+## problem : 
+i want to add or write in a file and i do not have permissions :
+
+sudo chmod username:username /etc/directory 
+
+will get you the permission // notice : username will change with your username , and /etc/directory with the directory you want to r/w on it 
