@@ -1,0 +1,10 @@
+problem : 
+
+imports dose not recognize by vscode 
+
+
+solution : 
+Check your GOPATH and GO111MODULE settings:
+
+    Ensure that your GOPATH environment variable is correctly set. It should point to the directory where your Go projects are located.
+    If you're using Go modules (GO111MODULE=on), ensure that your project is located outside of GOPATH and that you have initialized Go modules in your project directory.
