@@ -1,0 +1,39 @@
+How to Remove a Kernel in Ubuntu
+
+Once you’ve booted using an older kernel, you can delete the updated kernel that was causing the issues. Doing so means that the next time you boot, Ubuntu will use an earlier kernel instead. This should remove any issues that the upgraded kernel was causing. In order to remove a specific kernel, you’ll need to find its exact name first.
+
+To remove a kernel in Ubuntu:
+
+    Open a Terminal window.
+    Enter the following command to list the installed Linux images on your computer:
+
+    dpkg –list|grep linux-image
+
+    Press Enter.
+    Make a note of the exact name of the kernel you want to remove.
+    Enter the following command to list the Linux headers, as you’ll need to remove the kernel header too:
+
+dpkg -list|grep linux-header
+
+Press Enter.
+Make a note of the Linux header you want to remove.
+    Enter the following command to remove the Linux image, replacing linux-image-unsigned-6.1.1-0601010-generic with the Linux image name you copied down in step 4:
+
+    sudo apt-get purge linux-image-unsigned-6.1.1-0601010-generic
+
+    Press Enter.
+    Confirm that the correct package is listed as being removed, and click Y.
+
+    The kernel will be removed.
+To remove the Linux kernel header, enter the following command, replacing linux-headers-6.1.1-060101-generic with the name you copied down in step 6:
+
+sudo apt-get purge linux-headers-6.1.1-060101-generic
+
+Press Enter.
+Your Linux header should be removed.
+You can check that you have been successful by listing the installed kernels again with the command:
+
+dpkg –list|grep linux-image
+
+Press Enter.
+The kernel you deleted should no longer be listed.
